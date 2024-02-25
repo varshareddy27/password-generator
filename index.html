@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Password Generator</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: "Arial", sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-image: url('https://wallpapercave.com/wp/wp3204509.jpg');
+    }
+    
+    .container {
+      max-width: 400px;
+      padding: 20px;
+      background-color:rgb(200, 248, 248);
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      border: 3px solid aqua;
+    }
+    
+    .container h2 {
+      margin-top: 0;
+      text-align: center;
+      color: #333;
+    }
+    
+    .result-container {
+      position: relative;
+      margin-bottom: 20px;
+    }
+    
+    #result {
+      width: calc(100% - 50px);
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    
+    #copy {
+      position: absolute;
+      top: 50%;
+      right: 10px;
+      transform: translateY(-50%);
+      padding: 8px 16px;
+      border: none;
+      background-color: #007bff;
+      color: #fff;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    
+    #copy:hover {
+      background-color: #0056b3;
+    }
+    
+    .settings label {
+      display: block;
+      margin-bottom: 5px;
+      color: #555;
+    }
+    
+    .input-group {
+      margin-bottom: 10px;
+    }
+    
+    .input-group input[type="checkbox"] {
+      margin-right: 10px;
+    }
+    
+    #generate {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      border: none;
+      background-color: #4caf50;
+      color: #fff;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    
+    #generate:hover {
+      background-color: #45a049;
+    }
+    
+    .alert {
+      display: none;
+      padding: 10px 20px;
+      background-color: #4caf50;
+      color: #fff;
+      border-radius: 5px;
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="container">
+    <h2>Password Generator</h2>
+    <div class="result-container">
+      <input type="text" id="result" readonly />
+      <button id="copy">Copy</button>
+    </div>
+    <div class="settings">
+      <div class="input-group">
+        <label for="length">Length:</label>
+        <input type="range" id="length" min="8" max="128" value="16" />
+        <span id="length-result">16</span>
+      </div>
+      <div class="input-group">
+        <input type="checkbox" id="numbers" />
+        <label for="numbers">Include numbers</label>
+      </div>
+      <div class="input-group">
+        <input type="checkbox" id="symbols" />
+        <label for="symbols">Include symbols</label>
+      </div>
+    </div>
+    <button id="generate">Generate</button>
+  </div>
+  <div class="alert" id="alert"></div>
+  <script src="script.js"></script>
+</body>
+</html>
