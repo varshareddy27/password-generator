@@ -9,7 +9,7 @@ This is a simple password generator web application that allows users to generat
   
   STEPS:-
   
-1. Visit the [Password Generator](https://your-username.github.io/password-generator/) website.
+1. Visit the [Password Generator](https://password-generator-dusky-one.vercel.app/) website.
 2. Adjust the length of the password using the slider.
 3. Toggle the options to include numbers and symbols as desired.
 4. Click on the "Generate" button to generate a password.
